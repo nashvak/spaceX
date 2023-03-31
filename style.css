@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 16px/26px D-DIN-Regular, Arial, Verdana, sans-serif;
+}
+body{
+  background-color: black;
+}
+
+
+
+/*HEADER SECTION*/
+.header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 110px;
+  padding: 0 50px 0 90px;
+  z-index: 1;
+  width: 100%;
+  
+}
+.center-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+}
+
+.logo {
+  width: 240px;
+}
+svg {
+  font-size: 100%;
+  fill: white;
+}
+
+.center-nav a,.left-nav a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  color: white; 
+}
+.left-nav i {
+  color: white;
+  
+}
+.left-nav a:hover, .right-nav a:hover{
+  border-bottom: 1px solid white;
+}
+
+
+/*SECTION  1*/
+.section-1 {
+  
+  width: 100%;
+  height: 100vh;
+
+}
+.background-1 img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.inner-content {
+  position: absolute; 
+  left: 90px;
+  bottom: 15%;
+  max-width: 500px;
+  color: white;
+  z-index: 1;
+}
+
+.title-1{
+  font-size: 22px;
+  font-weight: 300px;
+  animation: fadeInUp 0.5s ease-in-out;  /* animation when page loads*/
+}
+
+.title-2{
+    font-size: 40px;
+    font-weight: 600;
+    padding: 0.5rem 0 2rem 0;
+    animation: fadeInUp 0.5s ease-in-out;
+    animation-fill-mode: both;  /*Stop from showing at start*/
+}
+.inner-content .btn{
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+}
+.btn{
+  position: relative;
+    padding: 15px 50px;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid white;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    min-width: 130px;
+    overflow: hidden;
+    z-index: 2;
+}
+.btn:hover span{
+  color: black;
+}
+.btn .hover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  color: black;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn:hover .hover{
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp{   /*text annimation*/
+  0%{
+    opacity:0;
+    transform: translateY(140px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeBounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-arrow{
+  position: absolute;
+  z-index: 3;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeBounce 4s infinite;
+}
+.scroll-arrow i{
+  color: white;
+  font-size: 30px;
+}
+
+
+/*BACKGROUND IMAGES*/
+section{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-2{
+  background-image: url("./images/section-2.jpg");
+  
+}
+.section-3{
+  background-image: url("./images/section-3.jpg");
+  
+}
+.section-4{
+  background-image: url("./images/section-4.jpg");
+  
+}
+.section-5{
+  background-image: url("./images/section-5.jpeg");
+  
+}
+
+
+/*FOOTER SECTION*/
+
+footer{
+  display: flex;
+  align-items: center;
+  margin: 3rem 0;
+  justify-content: center;
+}
+.copyright{
+  color: gray;
+  margin-right: 2rem;
+}
+footer a{
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-right: 2rem;
+  font-weight: 500;
+  color: white;
+  font-size: 13px;
+  
+}
+
+
+
+
+
+
+
+
+
+
